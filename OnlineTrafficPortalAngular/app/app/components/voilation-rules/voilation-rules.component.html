@@ -1,0 +1,20 @@
+<div class="container">
+    &nbsp;
+    <div class="table-responsive">
+        <table class="table table-bordered align-middle">
+            <thead class="table-active">
+            <tr>
+                <th scope="col">Violation ID</th>
+                <th scope="col">Rule</th>
+                <th scope="col">Compensation Amount</th>
+            </tr>
+            </thead>
+            <tbody class="table-info">
+            <tr *ngFor = "let violation of violations" style="text-align: center;">
+                <th scope="row">{{violation.voilationId}}</th>
+                <td>{{violation.rule}}</td>
+                <td>{{violation.compensationamount}}</td>
+            </tr>
+            </tbody>
+        </table>
+</div>

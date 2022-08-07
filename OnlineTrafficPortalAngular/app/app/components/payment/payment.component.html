@@ -1,0 +1,76 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-11">
+            <div class="card card0 rounded-0">
+                <div class="row">
+                    <div class="col-md-5 d-md-block d-none p-0 box">
+                        <div class="card rounded-0 border-0 card1" id="bill">
+                            <h3 id="heading1">Penalty Summary</h3>
+                            <div class="row">
+                                <div class="col-lg-7 col-8 mt-4 line pl-4">
+                                    <h2 class="bill-head">Volation Id:{{voilationId}}</h2>
+                                    <small class="bill-date">{{date}}</small>
+                                </div>
+                                <div class="col-sm-5 col-3 mt-3">
+                                    <h3 class="bill-head px-lg-5 px-m-4">ID :</h3>
+                                    <h3 class="bill-head px-lg-5 px-m-4">{{policeId}}</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 red-bg">
+                                    <p class="bill-date" id="total-label">Amount</p>
+                                    <h2 class="bill-head" id="total">{{amount | currency:'INR'}}</h2>
+                                    <small class="bill-date" id="total-label">Price includes all taxes</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 col-sm-12 p-0 box">
+                        <div class="card rounded-0 border-0 card2" id="paypage">
+                            <div class="form-card">
+                                <h2 id="heading2" class="text-danger">Payment Method</h2>
+                                <div class="radio-group">
+                                    <div class='radio' data-value="credit"><img
+                                            src="https://www.yourtechstory.com/wp-content/uploads/2020/11/need-to-know-how-to-change-the-upi-pin-on-phone-through-payment-apps-like-googlepay-phonepe-and-paytm-here-is-the-step-by-step-method-1024x561.jpg" width="200px" height="60px"></div>
+                                    <div class='radio' data-value="rupay"><img
+                                            src="https://myind.net/sites/default/files/field/image/06cd1a3c_rupay-logo.png" width="200px" height="60px"></div>
+                                    <br>
+                                </div>
+                                <label class="pay">Name on Card</label>
+                                <input type="text" name="holdername" placeholder="Enter your name">
+                                <div class="row">
+                                    <div class="col-8 col-md-6">
+                                        <label class="pay">Card Number</label>
+                                        <input type="text" name="cardno" id="cr_no"
+                                            placeholder="0000-0000-0000-0000" minlength="19" maxlength="19">
+                                    </div>
+                                    <div class="col-4 col-md-6">
+                                        <label class="pay">CVV</label>
+                                        <input type="password" name="cvcpwd" placeholder="&#9679;&#9679;&#9679;"
+                                            class="placeicon" minlength="3" maxlength="3">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label class="pay">Expiration Date</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="text" name="exp" id="exp" placeholder="MM/YY" minlength="5"
+                                            maxlength="5">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="button" value="MAKE A PAYMENT &nbsp; &#xf178;"
+                                            class="btn btn-info placeicon" (click)="complete()">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

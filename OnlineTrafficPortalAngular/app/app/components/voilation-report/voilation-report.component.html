@@ -1,0 +1,41 @@
+<div class="container">
+  &nbsp;
+  <div style="margin-left: 890px;">
+    <a href="https://www.google.com/maps/place/{{location}}/"><img src="https://www.kindpng.com/picc/m/481-4813002_google-maps-logo-hd-png-download.png" alt="" style="height: 35px; width: 70px;"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a type="button" routerLink="/policehome" class="btn btn-info">Go Back</a>
+  </div>
+    
+  &nbsp;
+  <div class="container">
+      <div style="margin-left: 400px;">
+        <input type="text" name="location" placeholder="Search By Pincode" [(ngModel)]="location"/> 
+        <button type="button" class="btn btn-md btn-primary" (click)=search()  style="margin-left: 50px;">Search</button> 
+       
+  </div>
+  <hr> 
+  <div class="container" style="margin-top:20px">
+    &nbsp;
+    <div class="row align-items-start">
+      <div class="col-4" *ngFor="let challan of challans">
+        <div class="card" style="width: 22rem;">
+          <div class="row g-3">
+            <div class="col-sm-2 col-md-12">
+              <img src="{{challan.proofUrl}}" class="img-fluid rounded-start">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title"><b>Challan No :</b> {{challan.challanNo}}</h5>
+                <p class="card-text"><b>Voilation ID :</b> {{challan.voilationId}}</p>
+                <p class="card-text"> <b>Vehicle No : </b> {{challan.vehicleNo}}</p>
+                <p class="card-text"><b>Challan amount : </b>{{challan.challanAmount}}</p>
+                <p class="card-text"><b>Location : </b>{{challan.location}}</p>
+                <p class="card-text"><b>Issued Date :</b> {{challan.date}}</p>
+                <p class="card-text"><b>Due Date :</b> {{challan.dueDate}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        &nbsp;
+      </div>
+    </div>
+  </div>
