@@ -1,0 +1,40 @@
+<div class="container">
+  &nbsp;
+  <div style="margin-left: 990px;">
+      <a type="button" routerLink="/policehome" class="btn btn-info">Go Back</a>
+  </div>
+  <hr>
+  <div class="row align-items-start" style="border-radius: 20%;">
+    <div class="col-4" *ngFor="let challan of challans">
+      &nbsp;
+      <div class="card" style="width: 22rem; border-radius: 30px;">
+        <div class="row g-4">
+          <div class="col-md-10">
+            <img src="{{challan.proofUrl}}" class="img-fluid rounded-start">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="card-title"> <b> Challan No. :</b> {{challan.challanNo}}</p>
+              <p class="card-text"><b>Voilation ID :</b> {{challan.voilationId}}</p>
+              <p class="card-text"><b>Vehicle No :</b> {{challan.vehicleNo}}</p>
+              <p class="card-text"><b>Challan amount :</b> {{challan.challanAmount}}</p>
+              <p class="card-text"><b>Location :</b> {{challan.location}}</p>
+              <p class="card-text"><b>Issued Date :</b> {{challan.date}}</p>
+              <p class="card-text"><b>Due Date :</b> {{challan.dueDate}}</p>
+              <p class="card-text"><b>Dispute expalanation :</b> {{challan.dispute}}</p>
+              <div class="row" style="margin-left: 30px;">
+                  <div class="col-md-5">
+                      <button type="button" class="btn btn-success" (click)=accept(challan.challanNo)>Accept</button>
+                  </div>
+                  &nbsp;&nbsp;&nbsp;
+                  <div class="col-md-6">
+                    <button type="button" class="btn btn-danger" (click)=reject(challan)>Reject</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      &nbsp;
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="container">
+    &nbsp;
+    <div class="row" style="margin-left: 20%;">
+        <div class="col-sm-3">
+          <a type="button" routerLink="/disputedchallan" class="btn btn-info">Dispute Challans</a>
+        </div>
+        <div class="col-sm-3">
+          <a type="button" routerLink="/viewbypolice" class="btn btn-info">View Challan</a>
+        </div>
+        <div class="col-sm-3">
+          <a type="button" routerLink="/voilation" class="btn btn-info">Voilation Report</a>
+        </div>
+        <div class="col-sm-3">
+          <a type="button" routerLink="/policehome" class="btn btn-info">Go Back</a>
+        </div>
+      </div>
+
+    <form class="well form-horizontal " #generateform="ngForm" (ngSubmit)="onSubmit()" style="margin-left: 400px;">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>
+                <p style="text-align:center">
+                    <h2><b>Fill Vehicle Owner Details</b></h2>
+            </legend><br>
+
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Name</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input placeholder="Name" class="form-control" type="text" name="name" [(ngModel)]="owner.name">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Email</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input placeholder="Email" class="form-control" type="email"  name="email" [(ngModel)]="owner.email">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Password</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input placeholder="password" class="form-control" type="password"  name="password" [(ngModel)]="owner.password">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">Mobile No</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input placeholder="mobile no" class="form-control" type="number" name="mobileNo" [(ngModel)]="owner.mobileNo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4"><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit"
+                        class="btn btn-warning">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUBMIT <span
+                            class="glyphicon glyphicon-send"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>

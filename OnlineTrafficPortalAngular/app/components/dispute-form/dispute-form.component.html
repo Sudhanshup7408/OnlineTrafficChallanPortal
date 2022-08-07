@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="container" id="left">
+        <div class="container" id="right">
+            <img src="{{challan.proofUrl}}" style="height: 250px; width: 300px; margin-top: 20px;">
+            </div>
+        <p><b> Challan No :</b> {{challan.challanNo}}</p>
+        <p><b>Vehicle No :</b> {{challan.vehicleNo}}</p>
+        <p><b>Pincode : </b>{{challan.location}}</p>
+        <p><b>Date : </b>{{challan.date}}</p>
+        <p><b>Due date : </b>{{challan.dueDate}}</p>
+        </div>
+        
+    <label name="dispute">Explanation:</label>
+    <textarea class="form-control" rows="5" id="comment" name="text" [(ngModel)] = dispute></textarea><br>
+    &nbsp;
+    <button type="button" class="btn btn-success" (click)=onSubmit()>Submit</button>
+</div>
